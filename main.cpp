@@ -2,32 +2,25 @@
 
 using namespace std;
 
-int main() {
-
-int k = 0;
-double S = 0;
-
-int a[10];
-for (int i = 0; i < 10; i++)
+bool IsPrime(int a)
 {
+    for(int i=2;i*i<a;i++)
 
- cin >> a[i];
+        if(a%i==0) return false;
 
- if (a[i] % 2 != 0 && a[i] != 0)
- {
-
-  k++; S += a[i];
-
- }
-
+    return true;
 }
+int main()
+{
+    int n;
 
-S = S / k;
+    cin>>n;
 
-cout << setprecision(2) << fixed;
+    if(IsPrime(n))
 
-cout << S;
+       cout<<"prime";
+    else
+       cout<<"composite";
 
-return 0;
-
+    return 0;
 }
