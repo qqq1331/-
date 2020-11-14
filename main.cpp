@@ -2,20 +2,32 @@
 
 using namespace std;
 
+int main() {
 
-int main()
+int k = 0;
+double S = 0;
+
+int a[10];
+for (int i = 0; i < 10; i++)
 {
-int a,b,c,d,o=0;
 
-cin>>a>>b>>c>>d;
+ cin >> a[i];
 
-for (int i=10000; i<=99999;i++)
+ if (a[i] % 2 != 0 && a[i] != 0)
+ {
 
-  if (i % a ==b && i % c == d)
-  {
-        cout<<i<<' ';
-  o=1;
-  }
-if (o==0)
-    cout<<-1;
+  k++; S += a[i];
+
+ }
+
+}
+
+S = S / k;
+
+cout << setprecision(2) << fixed;
+
+cout << S;
+
+return 0;
+
 }
