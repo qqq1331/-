@@ -2,25 +2,20 @@
 
 using namespace std;
 
-bool IsPrime(int a)
-{
-    for(int i=2;i*i<a;i++)
 
-        if(a%i==0) return false;
-
-    return true;
-}
 int main()
 {
-    int n;
+int a,b,c,d,o=0;
 
-    cin>>n;
+cin>>a>>b>>c>>d;
 
-    if(IsPrime(n))
+for (int i=10000; i<=99999;i++)
 
-       cout<<"prime";
-    else
-       cout<<"composite";
-
-    return 0;
+  if (i % a ==b && i % c == d)
+  {
+        cout<<i<<' ';
+  o=1;
+  }
+if (o==0)
+    cout<<-1;
 }
